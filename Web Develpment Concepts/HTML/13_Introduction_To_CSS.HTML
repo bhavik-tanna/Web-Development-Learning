@@ -1,0 +1,103 @@
+<!-- 
+- CSS gives style to raw HTML
+- It stands for Cascading Style Sheets
+- CSS is used to give style to our web pages
+- CSS is used to make websites responsive
+- CSS takes the responsibility of design in your websites
+
+CSS includes all the things which can be used to design the raw HTML from colouring the background and texts, to adjust the borders, give padding, etc. Moreover, CSS helps in making websites responsive. Responsive means that the site will behave accordingly to the different screen sizes. For example, if you open a website on a desktop and then on your mobile, you will find the difference between their displays. All the components in a navigation bar will move into a hamburger icon if you open the website on mobile.
+
+We can add styles in the HTML part itself, but I would rather recommend making a new CSS file and then attach it to the HTML part. It is so because it is a professional practice when different developers are working on a single website to keep the skeleton of a website in one file and the styling in another file.
+
+
+Role of CSS
+
+- CSS is a style sheet language that is used to handle the presentation of the web page containing HTML.
+- It makes our websites beautiful and modern looking.
+
+CSS Syntax
+
+P { color: blue; }
+
+
+- P stands for the selector and it decides which part of the HTML the CSS will be applied. It states where the CSS property is to be applied.
+- Property is used to describe which property you want to change or add. Whether you have to change colour, border, background, width, all these come under property. 
+- The last section is for defining the value. All the properties will be changed according to the value we provide.
+
+We can also target multiple properties at one time. The syntax is as follows-
+
+header, p.intro { background-color: red;
+                              border-radius: 3px,
+                         }
+
+There are three ways to Add CSS-
+
+- Inline CSS- CSS is added to the elements directly using the style attributes.
+- Internal CSS- CSS is kept inside the head tags in <style> tags
+- External CSS- CSS is kept separately inside a .CSS style sheet. 
+
+It involves two steps:
+    - First, write the CSS in.CSS file.
+    - Include that CSS file to Markup.
+                         
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Introduction To CSS</title>
+    <style>
+      p {
+        color: rgb(46, 15, 46);
+        background-color: rgb(255, 152, 221) !important;
+      }
+    </style>
+    <link rel="stylesheet" href="13_Introduction_To_CSS.css" />
+  </head>
+  <body>
+    <h3>This is CSS Introduction</h3>
+    <!-- <p style="color: red; background-color: yellow;">This tutorial will teach you everything you need to know about HTML/CSS</p> -->
+    <p>You need to know about HTML/CSS</p>
+  </body>
+</html>
+
+<!-- Inline, Internal, and External CSS
+
+Inline CSS allows you to apply a unique style to one HTML element at a time. You can assign the Inline CSS to a specific HTML element by using the style attribute with any CSS properties defined within it. 
+
+Let us try to understand this with an example
+
+<body>
+         <h1>This is CSS tutorial</h1>
+          <p style= “color: red;”>This tutorial will teach you everything you need to know about CSS</p>
+</body>
+
+Internal CSS is used to define a style tag for a single HTML page. It is defined in the <head> section within a <style> element. 
+    
+Let us understand the External CSS with the help of an example.
+
+    <head>
+         <style>
+                  p{
+                       color: purple;
+                     }
+         <style>
+    <head>
+
+External CSS is mostly used when you want to make changes on multiple pages. It is an ideal condition because it facilitates you to change the look of the entire website by changing just one file. We will add the stylesheet in the <head> section using <link> tag.
+
+<head>
+       <link rel= “stylesheet” href= “tut13.css”>
+<head>
+
+Then in 14_Inline, Internal_External_CSS.css file, we can write our CSS-
+
+p{
+       Color: greenyellow;
+}
+
+The point here to remember is that whether it is the Internal CSS or the External CSS, whichever is written after, gets the priority. But if you want that first one should get priority, so you can add important after it. The result will be, it will get the most priority of all. -->
